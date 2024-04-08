@@ -31,3 +31,15 @@ body {
     text-wrap: balance;
   }
 }
+
+.img1 {
+  grid-row: span 1 / span 1;
+}
+
+.img2 {
+  grid-row: span 2 / span 2;
+}
+
+.img3 {
+  grid-row: span 3 / span 3;
+}

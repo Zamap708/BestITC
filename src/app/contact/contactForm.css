@@ -1,0 +1,312 @@
+.contactForm {
+    position: fixed;
+    z-index: 100;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    inset: 0;
+
+    width: 100%;
+    /* max-width: 100vw; */
+    height: 100dvh;
+    margin: 0;
+    padding: 0;
+
+    padding-top: 40px;
+
+    background-color: rgb(0, 0, 0, .85);
+    
+}
+
+.modal-background {
+    position: fixed;
+    z-index: 50;
+    top: 0;
+    left: 0;
+
+    margin: 0;
+    padding: 0;
+
+    height: 100%;
+    width: 100%;
+}
+
+.contact-wrapper {
+    box-sizing: border-box;
+
+    position: relative;
+    z-index: 90;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+
+    width: 70%;
+    height: 80%;
+    /* min-width: 450px; */
+    margin: auto;
+    padding: 30px;
+
+    background-color: white; 
+    /* border-radius: 5px; */
+    border: 1px solid #1e1e1e;
+    overflow: hidden;
+/* 
+    background-image: url("../assets/gatsby-logo-no-text.png");
+    background-position: right;
+    background-size: contain;
+    background-repeat: no-repeat; */
+}
+
+.contact-wrapper::after {
+    content: "";
+
+    position: absolute;
+    z-index: -1;
+
+    top: 0;
+    left: 0;
+
+    width: 50%;
+    height: 100%;
+
+    background-color: #1e1e1e;
+}
+
+.contactForm-text-wrapper {
+    width: 50%;
+    color: white;
+    padding: 5px;
+}
+
+.contact-heading {
+    margin: 0;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.contact-subheading {
+    margin: 0;
+    font-size: 30px;
+    font-weight: 300;
+}
+
+.form-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    margin: auto;
+    width: 50%;
+}
+
+.input-wrapper {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    width: 95%;
+    padding: 10px;
+}
+
+input {
+    /* width: 400px; */
+    width: 100%;
+    /* height: 20px; */
+    padding: 10px;
+    margin: 5px auto;
+
+    background-color: #1e1e1e !important;
+    color: white;
+    /* border-radius: 5px; */
+    border: 1px solid #1e1e1e;
+
+    font-size: 16px;
+}
+
+input::placeholder {
+    color: white;
+}
+
+textarea::placeholder {
+    color: white;
+}
+
+textarea {
+    /* box-sizing: border-box; */
+    /* width: 400px; */
+    width: 100%;
+    height: 200px;
+    padding: 5px;
+    margin: 5px auto;
+
+    background-color: #1e1e1e;
+    color: #242424;
+    /* border-radius: 5px; */
+    border: 1px solid #1e1e1e;
+
+    font-size: 16px;
+}
+
+.thank-you {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin: auto;
+}
+
+.check {
+    width: 200px;
+    height: 200px;
+
+}
+
+.btn {
+    width: 100px;
+    height: 40px;
+    padding: 5px;
+    margin: 10px;
+
+    background-color: #1e1e1e;
+
+    border-radius: 5px;
+    border: 1px solid white;
+
+    color: white;
+
+    font-size: 16px;
+}
+
+.btn:hover {
+    background-color: #1e1e1e;
+
+    color: white;
+
+    transform: scale(1.05);
+    transition: all 200ms 0.1;
+
+    cursor: pointer;
+}
+
+@media (max-width: 1200px) {
+    .contact-heading {
+        font-size: 36px;
+    }
+    
+    .contact-subheading {
+        font-size: 20px;
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 900px) {
+    .contactForm-text-wrapper {
+        box-sizing: border-box;
+        padding-right: 10px;
+    }
+
+} 
+
+@media (max-width: 640px) {
+    .contact-wrapper {
+        /* flex-direction: column; */
+        width: 90%;
+    }
+
+} 
+
+
+/* body {
+    padding: 5em;
+    text-align: center;
+  }
+   */
+  /* h1 {
+    margin-bottom: 1em;
+  } */
+  
+  /* Define vars we'll be using */
+  .circle-loader {
+    margin-bottom: 3.5em; /* Equivalent to $loader-size/2 */
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-left-color: #5cb85c; /* Equivalent to $brand-success */
+    animation: loader-spin 1.2s infinite linear;
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    border-radius: 50%;
+    width: 7em; /* Equivalent to $loader-size */
+    height: 7em; /* Equivalent to $loader-size */
+  }
+  
+  .load-complete {
+    -webkit-animation: none;
+    animation: none;
+    border-color: #5cb85c; /* Equivalent to $brand-success */
+    transition: border 500ms ease-out;
+  }
+  
+  .checkmark {
+    display: none;
+  }
+  
+  .checkmark.draw:after {
+    animation-duration: 800ms;
+    animation-timing-function: ease;
+    animation-name: checkmark;
+    transform: scaleX(-1) rotate(135deg);
+  }
+  
+  .checkmark:after {
+    opacity: 1;
+    height: 3.5em; /* Equivalent to $check-height */
+    width: 1.75em; /* Equivalent to $check-width */
+    transform-origin: left top;
+    border-right: 3px solid #5cb85c; /* Equivalent to $check-thickness and $check-color */
+    border-top: 3px solid #5cb85c; /* Equivalent to $check-thickness and $check-color */
+    content: '';
+    left: 1.75em; /* Equivalent to $check-left */
+    top: 3.5em; /* Equivalent to $check-height */
+    position: absolute;
+  }
+  
+  @keyframes loader-spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes checkmark {
+    0% {
+      height: 0;
+      width: 0;
+      opacity: 1;
+    }
+    20% {
+      height: 0;
+      width: 1.75em; /* Equivalent to $check-width */
+      opacity: 1;
+    }
+    40% {
+      height: 3.5em; /* Equivalent to $check-height */
+      width: 1.75em; /* Equivalent to $check-width */
+      opacity: 1;
+    }
+    100% {
+      height: 3.5em; /* Equivalent to $check-height */
+      width: 1.75em; /* Equivalent to $check-width */
+      opacity: 1;
+    }
+  }
+  
