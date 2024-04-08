@@ -1,3 +1,4 @@
+"use client"
 import Hero from "./hero/Hero";
 import Target from "./target/Target";
 import About from "./about/About";
