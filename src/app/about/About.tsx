@@ -1,5 +1,7 @@
 import React from "react";
-import { rubikMono } from "../layout";
+import { Rubik_Mono_One } from "next/font/google";
+
+const rubikMono = Rubik_Mono_One({ subsets: ["latin"], weight: "400" });
 
 export default function About() {
   return (

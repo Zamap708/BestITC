@@ -25,7 +25,7 @@ export default function Clients() {
       <div className="flex flex-col items-start justify-center w-4/5 gap-10">
         <div className="pb-5 border-b-4 border-black">
           <h1 className="text-5xl text-black" style={rubikMono.style}>
-            CLIENTS WE'VE MADE <br /> THE BEST IN THE CITY
+            CLIENTS WE{`'`}VE MADE <br /> THE BEST IN THE CITY
           </h1>
         </div>
       </div>

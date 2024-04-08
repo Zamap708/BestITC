@@ -20,11 +20,14 @@ export default function ContactForm(props: any) {
   const [hideModal, setHideModal] = useState(false);
 
   const router = useRouter();
-  const closeModal = () => {
-    // props.handleClick();
+  function closeModal() {
+    
     router.push("/");
     setIsSubmitted(false);
-  };
+  }
+  // const closeModal = () => {
+  //   // props.handleClick();
+  // };
 
   useEffect(() => {
     if (isSubmitted) {
@@ -64,7 +67,7 @@ export default function ContactForm(props: any) {
           <p className="heading">Contact Us</p>
           <p className="content">
             Interested in working with us? <br />
-            Get in touch with this form and we'll get back to you as soon as
+            Get in touch with this form and we{`'`}ll get back to you as soon as
             possible.
           </p>
         </div>
